@@ -1,18 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
     --cor-de-fundo: #1E1E1E;
-    --verde: #6FFF57;
+    --verde: #ff5757;
     --branco: #FFFFFF;
     --botao-ativo: #3A375E;
-    --botao-inativo: rgba(58, 55, 94, 0.5);
-    --texto-fundo: rgba(58, 55, 94, 0.3);
+    --botao-inativo: rgb(38, 37, 50);
+    --texto-fundo: rgb(38, 37, 50);
 }
 
 body {
     background-color: var(--cor-de-fundo);
     color: var(--branco);
-    font-family: 'Chakra Petch', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.background-effect-1, .background-effect-2, .background-effect-3 {
+    z-index: -1;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    filter: blur(100px);
+    pointer-events: none; /* garante que não bloqueie cliques */
+}
+
+.background-effect-1{
+    transform: translate(-50%, -80%);
+    background: radial-gradient(circle at center, #fb34347d, transparent 30%);
+}
+
+.background-effect-2{
+    transform: translate(50%, -70%);
+    background: radial-gradient(circle at center, #fb34347d, transparent 50%);
+}
+
+.background-effect-3{
+    transform: translate(-50%, 70%);
+    background: radial-gradient(circle at center, #fb34347d, transparent 40%);
 }
 
 
@@ -38,7 +64,7 @@ body {
 
 
 .botao {
-    font-family: 'Chakra Petch', sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: var(--botao-inativo);
     color: var(--branco);
     display: flex;
